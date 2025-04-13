@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"></script>
+
+    <!-- for loading animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet">
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({ }, 'google_translate_element');
+        }
+      </script>
+    <script
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  </head>
+  <body>
+
+    <div class="behindnav"></div>
+    <nav class="navbar">
+      <div class="wrapper">
+        <div class="whitebox">
+          <div class="left">
+            <a href="index.html"><img src="img/logo.webp" alt="img"></a>
+          </div>
+          <div class="middle">
+            <ul>
+              <li><a href="#hero" class="scroll" name="hero">Home</a></li>
+              <li><a href="#area" class="scroll" name="area">Area</a></li>
+              <li><a href="#service" class="scroll"
+                  name="service">Services</a></li>
+              <li><a href="#about" class="scroll" name="about">Why
+                  Cleansmile</a></li>
+              <!-- <li><a href="#">FAQs</a></li> -->
+            </ul>
+          </div>
+          <div class="right">
+            <a href="#" class="icon-btn">
+              <img src="img/in.webp" alt="img">
+            </a>
+            <a href="#contact" class="getin scroll">
+              Get in Touch
+            </a>
+
+            <div class="left-line"></div>
+
+            <div class="language-switcher">
+              <a href="#" class="choosen">
+                <img src="https://flagcdn.com/w40/gb.webp"
+                  alt="English"
+                  class="flag-icon">
+                <span>English</span>
+                <img src="img/arrow-down.svg" alt="img">
+              </a>
+
+              <ul class="language-dropdown notranslate">
+                <li data-lang="ar"><img loading="lazy"
+                    src="https://flagcdn.com/w40/sa.webp"
+                    alt="Arabic"> <span
+                    class="notranslate">Arabic</span></li>
+                <li data-lang="bg"><img loading="lazy"
+                    src="https://flagcdn.com/w40/bg.webp"
+                    alt="Bulgarian"> <span
+                    class="notranslate">Bulgarian</span></li>
+                <li data-lang="en"><img loading="lazy"
+                    src="https://flagcdn.com/w40/gb.webp"
+                    alt="English"> <span
+                    class="notranslate">English</span></li>
+                <li data-lang="zh-CN"><img loading="lazy"
+                    src="https://flagcdn.com/w40/cn.webp"
+                    alt="Chinese (Simplified)"> <span
+                    class="notranslate">Chinese
+                    (Simplified)</span></li>
+                <li data-lang="zh-TW"><img loading="lazy"
+                    src="https://flagcdn.com/w40/tw.webp"
+                    alt="Chinese (Traditional)"> <span
+                    class="notranslate">Chinese
+                    (Traditional)</span></li>
+                <li data-lang="cs"><img loading="lazy"
+                    src="https://flagcdn.com/w40/cz.webp"
+                    alt="Czech"> <span
+                    class="notranslate">Czech</span></li>
+                <li data-lang="nl"><img loading="lazy"
+                    src="https://flagcdn.com/w40/nl.webp"
+                    alt="Dutch"> <span
+                    class="notranslate">Dutch</span></li>
+                <li data-lang="fr"><img loading="lazy"
+                    src="https://flagcdn.com/w40/fr.webp"
+                    alt="French"> <span
+                    class="notranslate">French</span></li>
+                <li data-lang="de"><img loading="lazy"
+                    src="https://flagcdn.com/w40/de.webp"
+                    alt="German"> <span
+                    class="notranslate">German</span></li>
+                <li data-lang="el"><img loading="lazy"
+                    src="https://flagcdn.com/w40/gr.webp"
+                    alt="Greek"> <span
+                    class="notranslate">Greek</span></li>
+                <li data-lang="hu"><img loading="lazy"
+                    src="https://flagcdn.com/w40/hu.webp"
+                    alt="Hungarian"> <span
+                    class="notranslate">Hungarian</span></li>
+                <li data-lang="id"><img loading="lazy"
+                    src="https://flagcdn.com/w40/id.webp"
+                    alt="Indonesian"> <span
+                    class="notranslate">Indonesian</span></li>
+                <li data-lang="it"><img loading="lazy"
+                    src="https://flagcdn.com/w40/it.webp"
+                    alt="Italian"> <span
+                    class="notranslate">Italian</span></li>
+                <li data-lang="ja"><img loading="lazy"
+                    src="https://flagcdn.com/w40/jp.webp"
+                    alt="Japanese"> <span
+                    class="notranslate">Japanese</span></li>
+                <li data-lang="ko"><img loading="lazy"
+                    src="https://flagcdn.com/w40/kr.webp"
+                    alt="Korean"> <span
+                    class="notranslate">Korean</span></li>
+                <li data-lang="pl"><img loading="lazy"
+                    src="https://flagcdn.com/w40/pl.webp"
+                    alt="Polish"> <span
+                    class="notranslate">Polish</span></li>
+                <li data-lang="pt"><img loading="lazy"
+                    src="https://flagcdn.com/w40/pt.webp"
+                    alt="Portuguese"> <span
+                    class="notranslate">Portuguese</span></li>
+                <li data-lang="ro"><img loading="lazy"
+                    src="https://flagcdn.com/w40/ro.webp"
+                    alt="Romanian"> <span
+                    class="notranslate">Romanian</span></li>
+                <li data-lang="ru"><img loading="lazy"
+                    src="https://flagcdn.com/w40/ru.webp"
+                    alt="Russian"> <span
+                    class="notranslate">Russian</span></li>
+                <li data-lang="sk"><img loading="lazy"
+                    src="https://flagcdn.com/w40/sk.webp"
+                    alt="Slovak"> <span
+                    class="notranslate">Slovak</span></li>
+                <li data-lang="es"><img loading="lazy"
+                    src="https://flagcdn.com/w40/es.webp"
+                    alt="Spanish"> <span
+                    class="notranslate">Spanish</span></li>
+                <li data-lang="th"><img loading="lazy"
+                    src="https://flagcdn.com/w40/th.webp"
+                    alt="Thai"> <span class="notranslate">Thai</span></li>
+                <li data-lang="tr"><img loading="lazy"
+                    src="https://flagcdn.com/w40/tr.webp"
+                    alt="Turkish"> <span
+                    class="notranslate">Turkish</span></li>
+                <li data-lang="vi"><img loading="lazy"
+                    src="https://flagcdn.com/w40/vn.webp"
+                    alt="Vietnamese"> <span
+                    class="notranslate">Vietnamese</span></li>
+                <li data-lang="hi"><img loading="lazy"
+                    src="https://flagcdn.com/w40/in.webp"
+                    alt="Hindi"> <span
+                    class="notranslate">Hindi</span></li>
+              </ul>
+
+              <!-- Hidden Google Translate Element -->
+              <div id="google_translate_element" style="display: none;"></div>
+
+            </div>
+
+            <div class="lines">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero" id="hero">
+      <div class="bubbles"></div>
+      <div class="wrapper">
+        <div class="cont">
+          <div class="left">
+            <h1 data-aos="fade-right" data-aos-delay="100">Quality with Heart
+              and Reliability</h1>
+            <p data-aos="fade-right" data-aos-delay="250">We are a certified,
+              family-owned German business providing
+              expert,
+              eco-friendly cleaning solutions for both indoor and outdoor spaces
+              with reliability and care</p>
+            <a data-aos="fade-right" data-aos-delay="350" href
+              class="btn-pr scroll2" name="contact">Get offer now</a>
+          </div>
+          <div>
+            <img data-aos="fade-left" data-aos-delay="200"
+              src="img/bigger-logo.webp" alt="img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="our-service-area" id="area">
+      <div class="wrapper">
+        <div class="box">
+          <div class="inside">
+            <h3 data-aos="fade-right" data-aos-delay="100">Our Service Area
+            </h3>
+            <h2 data-aos="fade-right" data-aos-delay="150">Cleaning & Apartment
+              Care in Slatine & Surroundings</h2>
+            <p data-aos="fade-right" data-aos-delay="200">As a family business,
+              we focus on personalized service. We are
+              based in Slatine, Croatia, and offer our professional cleaning
+              services within a 35 km radius, covering both large and small
+              towns.</p>
+            <div class="map">
+              <img loading="lazy" src="img/map.webp" alt="img">
+              <div class="dot dot1"></div>
+              <div class="dot dot2"></div>
+              <div class="dot dot3"></div>
+              <div class="dot dot4"></div>
+              <div class="dot dot5"></div>
+              <div class="dot dot6"></div>
+              <div class="dot dot7"></div>
+              <div class="dot dot8"></div>
+            </div>
+            <div class="cont">
+              <div class="location-box" data-aos="fade-up" data-aos-delay="100">
+                <ul>
+                  <li class="tit">Location:</li>
+                  <li>Split</li>
+                  <li>Trogir</li>
+                  <li>Kaštela</li>
+                  <li>Okrug</li>
+                  <li>Solin</li>
+                </ul>
+              </div>
+              <div class="location-box2" data-aos="fade-right"
+                data-aos-delay="100">
+                <ul>
+                  <li>Arbanija</li>
+                  <li>Mastrinka</li>
+                  <li>Žedno</li>
+                  <li>Seget Vranjica</li>
+                  <li>Seget Donji</li>
+                  <li>Marina</li>
+                  <li>Vinišće</li>
+                  <li>Podstrana</li>
+                  <li>Stobreč</li>
+                </ul>
+              </div>
+              <p data-aos="fade-up" data-aos-delay="100"> Whether it's an
+                apartment, villa, or commercial property, we
+                ensure spotless cleanliness and a well-maintained environment
+                that leaves a lasting impression. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="our-service" id="service">
+      <div class="wrapper">
+        <h3 data-aos="fade-up" data-aos-delay="100">Our Services</h3>
+        <h2 data-aos="fade-up" data-aos-delay="200">Cleaning & Maintenance for
+          Indoor & Outdoor Areas</h2>
+
+        <div class="boxes">
+          <div class="box" data-aos="fade-right" data-aos-delay="100">
+            <img loading="lazy" src="img/box1.webp" class="main-img" alt="img">
+            <div class="icon-place">
+              <svg width="31" height="36" viewBox="0 0 31 36" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M23.6839 22.1956L17.0845 19.1132C16.9659 19.0342 16.8079 19.0342 16.6893 19.0342C16.5707 19.0342 16.4522 19.0737 16.3336 19.1132C16.0965 19.1923 15.899 19.3898 15.7804 19.627C15.7804 19.6665 14.99 21.4448 13.0537 23.223C10.485 25.5941 7.28412 26.8587 3.45092 27.0167C3.05575 27.0167 2.73961 27.2538 2.58154 27.6095C2.46298 27.9652 2.54202 28.3603 2.81864 28.637C6.53329 32.3121 10.8802 34.6436 16.0965 35.7501C16.1756 35.7501 16.2151 35.7896 16.2941 35.7896C16.3336 35.7896 16.4127 35.7896 16.4522 35.7896C19.8507 35.1969 22.2613 32.7863 23.4073 28.7555C24.2767 25.8707 24.1581 23.1835 24.1581 23.065C24.1976 22.6698 24 22.3537 23.6839 22.1956ZM16.3336 34.8017C14.99 34.5251 13.7255 34.1299 12.4609 33.6557C13.844 33.4581 14.99 32.8653 15.8594 32.2726C17.4401 31.1661 18.8232 29.5459 19.416 28.0047C19.495 27.7676 19.3765 27.4909 19.1394 27.3724C18.9023 27.2934 18.6257 27.4119 18.5071 27.649C17.5982 30.0201 13.9626 33.6557 10.0108 32.5887H9.97132C9.14145 32.1935 8.3511 31.7193 7.56075 31.2056C9.65518 31.1661 12.1843 30.1781 13.2908 28.8345C13.4489 28.637 13.4489 28.3208 13.2513 28.1627C13.0537 28.0047 12.7375 28.0047 12.5795 28.2023C10.9988 30.0596 7.08654 30.7709 5.70342 29.8225C5.6639 29.783 5.58487 29.783 5.54535 29.7434C4.83404 29.1902 4.16224 28.5579 3.49044 27.9256C13.3698 27.5305 16.6498 19.9826 16.6498 19.9826L23.2492 23.065C23.2887 23.065 23.6839 33.5371 16.3336 34.8017ZM30.56 2.04164C30.4019 1.56743 30.0462 1.21177 29.6115 0.974667C29.1768 0.77708 28.6631 0.737562 28.1889 0.895632C27.7147 1.0537 27.3195 1.40936 27.1219 1.88357L20.6015 15.7542L19.0999 15.0429C18.4281 14.7268 17.5982 15.0034 17.2821 15.7147L16.8474 16.6236C16.5312 17.2954 16.8079 18.1253 17.5192 18.4414L23.9605 21.4448C24.1581 21.5238 24.3557 21.5633 24.5533 21.5633C25.067 21.5633 25.5807 21.2867 25.8179 20.773L26.2526 19.8641C26.5687 19.1923 26.2921 18.3624 25.5807 18.0462L24.0396 17.3349L30.56 3.46427C30.718 2.99006 30.718 2.51585 30.56 2.04164ZM25.1461 18.9156C25.3436 19.0342 25.4622 19.2713 25.3436 19.4689L24.909 20.3778C24.8299 20.5754 24.5533 20.6939 24.3557 20.5754L17.9143 17.572C17.7168 17.4535 17.5982 17.2164 17.7168 17.0188L18.1515 16.1099C18.191 15.9913 18.27 15.9123 18.3886 15.9123C18.5071 15.8728 18.6257 15.8728 18.7047 15.9123L20.2064 16.6236L23.6049 18.2043L25.1461 18.9156ZM29.6511 3.0691L23.1307 16.9398L21.4709 16.1494L27.9913 2.27875C28.1099 2.04164 28.2679 1.88357 28.505 1.80454C28.7422 1.7255 28.9793 1.7255 29.2164 1.84405C29.4535 1.96261 29.6115 2.12068 29.6906 2.35778C29.7696 2.59489 29.7301 2.83199 29.6511 3.0691ZM3.80658 23.144C3.80658 23.4206 4.00417 23.6182 4.28079 23.6182C4.55741 23.6182 4.755 23.4206 4.755 23.144C4.755 21.4448 6.13812 20.0616 7.83737 20.0616C8.11399 20.0616 8.31158 19.8641 8.31158 19.5874C8.31158 19.3108 8.11399 19.1132 7.83737 19.1132C6.13812 19.1132 4.755 17.7301 4.755 16.0309C4.755 15.7542 4.55741 15.5566 4.28079 15.5566C4.00417 15.5566 3.80658 15.7542 3.80658 16.0309C3.80658 17.7301 2.42347 19.1132 0.724211 19.1132C0.447588 19.1132 0.25 19.3108 0.25 19.5874C0.25 19.8641 0.447588 20.0616 0.724211 20.0616C2.42347 20.0616 3.80658 21.4448 3.80658 23.144ZM4.28079 17.9672C4.63645 18.6785 5.22921 19.2318 5.94053 19.627C5.22921 19.9826 4.67597 20.5754 4.28079 21.2867C3.92513 20.5754 3.33237 20.0221 2.62105 19.627C3.33237 19.2318 3.88562 18.639 4.28079 17.9672ZM6.37522 14.055C6.37522 14.3316 6.57281 14.5292 6.84943 14.5292C7.75834 14.5292 8.50917 15.28 8.50917 16.1889C8.50917 16.4655 8.70676 16.6631 8.98338 16.6631C9.26 16.6631 9.45759 16.4655 9.45759 16.1889C9.45759 15.28 10.2084 14.5292 11.1173 14.5292C11.3939 14.5292 11.5915 14.3316 11.5915 14.055C11.5915 13.7784 11.3939 13.5808 11.1173 13.5808C10.2084 13.5808 9.45759 12.8299 9.45759 11.921C9.45759 11.6444 9.26 11.4468 8.98338 11.4468C8.70676 11.4468 8.50917 11.6444 8.50917 11.921C8.50917 12.8299 7.75834 13.5808 6.84943 13.5808C6.57281 13.5808 6.37522 13.7784 6.37522 14.055ZM8.98338 13.4227C9.14145 13.6598 9.37855 13.8969 9.61566 14.055C9.37855 14.213 9.14145 14.4502 8.98338 14.6873C8.82531 14.4502 8.5882 14.213 8.3511 14.055C8.5882 13.8574 8.82531 13.6598 8.98338 13.4227ZM2.14684 10.696C3.05575 10.696 3.80658 11.4468 3.80658 12.3557C3.80658 12.6323 4.00417 12.8299 4.28079 12.8299C4.55741 12.8299 4.755 12.6323 4.755 12.3557C4.755 11.4468 5.50583 10.696 6.41474 10.696C6.69136 10.696 6.88895 10.4984 6.88895 10.2218C6.88895 9.94515 6.69136 9.74756 6.41474 9.74756C5.50583 9.74756 4.755 8.99673 4.755 8.08783C4.755 7.8112 4.55741 7.61362 4.28079 7.61362C4.00417 7.61362 3.80658 7.8112 3.80658 8.08783C3.80658 8.99673 3.05575 9.74756 2.14684 9.74756C1.87022 9.74756 1.67263 9.94515 1.67263 10.2218C1.67263 10.4984 1.87022 10.696 2.14684 10.696ZM4.28079 9.58949C4.43886 9.8266 4.67597 10.0637 4.91307 10.2218C4.67597 10.3798 4.43886 10.617 4.28079 10.8541C4.12272 10.617 3.88561 10.3798 3.64851 10.2218C3.88561 10.0637 4.0832 9.86612 4.28079 9.58949Z"
+                  fill="#00B3FF" />
+              </svg>
+            </div>
+            <h4>Deep Cleaning / Intensive Cleaning</h4>
+            <ul>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Thorough cleaning of floors, walls, windows, and furniture.
+              </li>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Removal of dirt and deposits.
+              </li>
+            </ul>
+            <h5>
+              <span>💡</span>Ideal for:
+            </h5>
+            <p>
+              New constructions, move-outs, post-renovation clean-ups
+            </p>
+          </div>
+          <div class="box" data-aos="fade-left" data-aos-delay="100">
+            <img loading="lazy" src="img/box2.webp" class="main-img" alt="img">
+            <div class="icon-place">
+              <img loading="lazy" src="img/box2-svg.svg" alt="img">
+            </div>
+            <h4>Final Cleaning / Move-Out Cleaning</h4>
+            <ul>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Complete cleaning before property handover or tenant change.
+              </li>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Cleaning of floors, windows, bathrooms, kitchens, and living
+                areas.
+              </li>
+            </ul>
+            <h5>
+              <span>💡</span>Ideal for:
+            </h5>
+            <p>
+              Landlords, real estate agents, property managers, tenants.
+            </p>
+          </div>
+          <div class="box" data-aos="fade-right" data-aos-delay="100">
+            <img loading="lazy" src="img/box3.webp" class="main-img" alt="img">
+            <div class="icon-place">
+              <img loading="lazy" src="img/box3-svg.svg" alt="img">
+            </div>
+            <h4>Carpet & Upholstery Cleaning</h4>
+            <ul>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Deep cleaning of carpets and upholstered furniture with
+                specialized equipment.
+              </li>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Removes dirt, stains, and bacteria for a fresh and hygienic
+                environment.
+              </li>
+            </ul>
+            <h5>
+              <span>💡</span>Ideal for:
+            </h5>
+            <p>
+              Apartments, villas, private households, hotels.
+            </p>
+          </div>
+          <div class="box" data-aos="fade-left" data-aos-delay="100">
+            <img loading="lazy" src="img/box4.webp" class="main-img" alt="img">
+            <div class="icon-place">
+              <img loading="lazy" src="img/box4-svg.svg" alt="img">
+            </div>
+            <h4>Window & Glass Cleaning</h4>
+            <ul>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Cleaning of windows, glass facades, window frames, and blinds.
+              </li>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Professional cleaning products for streak-free results.
+              </li>
+            </ul>
+            <h5>
+              <span>💡</span>Ideal for:
+            </h5>
+            <p>
+              Customers with large windows or high blinds in apartments, villas,
+              office buildings, commercial properties.
+            </p>
+          </div>
+        </div>
+        <div class="boxes hidden-boxes">
+          <div class="box">
+            <img loading="lazy" src="img/box5.webp" class="main-img" alt="img">
+            <div class="icon-place">
+              <img loading="lazy" src="img/svg-box5.svg" class="main-img"
+                alt="img">
+            </div>
+            <h4> Kitchen & Bathroom Cleaning</h4>
+            <ul>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Thorough cleaning of countertops, appliances, sinks, showers,
+                and toilets.
+              </li>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Removes grease, limescale, and dirt for a hygienic environment.
+              </li>
+            </ul>
+            <h5>
+              <span>💡</span>Ideal for:
+            </h5>
+            <p>
+              Apartments, villas, vacation homes.
+            </p>
+          </div>
+
+          <div class="box">
+            <img loading="lazy" src="img/box6.webp" class="main-img" alt="img">
+            <div class="icon-place">
+              <img loading="lazy" src="img/svg-box6.svg" class="main-img"
+                alt="img">
+            </div>
+            <h4>Floor Cleaning & Maintenance</h4>
+            <ul>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Cleaning of tiles, wood, laminate, and other hard floors with
+                specialized care products.
+              </li>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Gentle cleaning and maintenance to extend durability
+              </li>
+            </ul>
+            <h5>
+              <span>💡</span>Ideal for:
+            </h5>
+            <p>
+              Apartments, villas, houses, offices
+            </p>
+          </div>
+
+          <div class="box">
+            <img loading="lazy" src="img/box7.webp" class="main-img" alt="img">
+            <div class="icon-place">
+              <img loading="lazy" src="img/svg-box7.svg" class="main-img"
+                alt="img">
+            </div>
+            <h4>Marble Cleaning & Care</h4>
+            <ul>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Specialized cleaning of marble surfaces to remove dirt and water
+                stains.
+              </li>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Regular maintenance to preserve the beauty of marble and extend
+                its durability.
+              </li>
+            </ul>
+            <h5>
+              <span>💡</span>Ideal for:
+            </h5>
+            <p>
+              Apartments, villas, hotels, offices, luxury apartments.
+            </p>
+          </div>
+
+          <div class="box">
+            <img loading="lazy" src="img/box8.webp" class="main-img" alt="img">
+            <div class="icon-place">
+              <img loading="lazy" src="img/svg-box8.svg" class="main-img"
+                alt="img">
+            </div>
+            <h4>Pool & Grout Cleaning</h4>
+            <ul>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Removal of limescale, grease, and deposits from pool walls and
+                floors.
+              </li>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Thorough grout cleaning to prevent buildup and mold.
+              </li>
+            </ul>
+            <h5>
+              <span>💡</span>Ideal for:
+            </h5>
+            <p>
+              Apartments, villas, private pools, hotel pools.
+            </p>
+          </div>
+
+          <div class="box">
+            <img loading="lazy" src="img/box9.webp" class="main-img" alt="img">
+            <div class="icon-place">
+              <img loading="lazy" src="img/svg-box9.svg" class="main-img"
+                alt="img">
+            </div>
+            <h4>Special Cleaning (Renovations, Moving)</h4>
+            <ul>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Post-construction and renovation cleaning, including dust
+                removal.
+              </li>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Removal of paint splatters and dirt for immediate occupancy.
+              </li>
+            </ul>
+            <h5>
+              <span>💡</span>Ideal for:
+            </h5>
+            <p>
+              Homeowners, renovators, moving customers.
+            </p>
+          </div>
+
+          <div class="box">
+            <img loading="lazy" src="img/box10.webp" class="main-img" alt="img">
+            <div class="icon-place">
+              <img loading="lazy" src="img/svg-box10.svg" class="main-img"
+                alt="img">
+            </div>
+            <h4>Reliable Key Handover</h4>
+            <ul>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Personal key handover and introduction to the main features of
+                the apartment by our friendly team.
+              </li>
+              <li>
+                <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                  alt="img">
+                Assistance with questions about apartment usage and
+                recommendations for local attractions
+              </li>
+            </ul>
+            <h5>
+              <span>💡</span>Ideal for:
+            </h5>
+            <p>
+              Landlords, real estate managers, vacation rentals.
+            </p>
+          </div>
+
+        </div>
+        <div class="btn-box" data-aos="fade-up" data-aos-delay="100">
+          <a href="#" class="btn-pr">View more</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="apartment-care">
+      <div class="wrapper">
+        <div class="box">
+          <h2 data-aos="fade-right" data-aos-delay="100">Apartment Care </h2>
+          <p data-aos="fade-right" data-aos-delay="150">We ensure that your
+            guests enjoy a pristine and inviting stay.</p>
+          <ul>
+            <li data-aos="fade-right" data-aos-delay="100">
+              <div class="icon-place">
+                <img loading="lazy" src="img/ap1.svg" alt="img">
+              </div>
+              Regular cleaning & maintenance (before, during, or after rental
+              stays).
+            </li>
+            <li data-aos="fade-right" data-aos-delay="100">
+              <div class="icon-place">
+                <img loading="lazy" src="img/ap2.svg" alt="img">
+              </div>
+              Bedding & towel change service for guests.
+            </li>
+            <li data-aos="fade-right" data-aos-delay="100">
+              <div class="icon-place">
+                <img loading="lazy" src="img/ap3.svg" alt="img">
+              </div>
+              Outdoor area maintenance (e.g., terraces, balconies, entrances).
+            </li>
+            <li data-aos="fade-right" data-aos-delay="100">
+              <div class="icon-place">
+                <img loading="lazy" src="img/ap5.svg" alt="img">
+              </div>
+              Friendly welcome on the day of arrival & farewell to guests on the
+              day of departure.
+            </li>
+          </ul>
+          <img loading="lazy" data-aos="fade-left" data-aos-delay="100"
+            src="img/ap-care.webp"
+            class="ap-care" alt="img">
+          <div class="box-white" data-aos="fade-up" data-aos-delay="100">
+            <p>Want your guests to feel at home? Let us take care of the
+              cleanliness! </p>
+            <a href="#" class="btn-pr scroll2" name="contact">Get offer</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-us" id="about">
+      <div class="wrapper">
+        <div class="cont">
+          <div class="l">
+            <h4 data-aos="fade-right" data-aos-delay="100">Our Strengths:</h4>
+            <h2 data-aos="fade-right" data-aos-delay="150">Why Choose Our Family
+              Business?</h2>
+            <p data-aos="fade-right" data-aos-delay="200">We also take care of
+              the apartments during the guests' stay,
+              making
+              sure they have a comfortable and wellmaintained environment.</p>
+          </div>
+          <div class="r">
+            <div class="box">
+              <ul>
+                <li data-aos="fade-left" data-aos-delay="100">
+                  <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                    alt="img">
+                  Family-run business with a personal touch & dedication
+                </li>
+                <li class="highlight" data-aos="fade-left" data-aos-delay="100">
+                  <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                    alt="img">
+                  Years of experience from Germany & professional certifications
+                </li>
+                <li data-aos="fade-left" data-aos-delay="100">
+                  <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                    alt="img">
+                  Expert knowledge of professional & eco-friendly cleaning
+                  solutions
+                </li>
+                <li data-aos="fade-left" data-aos-delay="100">
+                  <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                    alt="img">
+                  Highest cleaning standards for indoor & outdoor spaces
+                </li>
+                <li data-aos="fade-left" data-aos-delay="100">
+                  <img loading="lazy" src="img/star-mark.svg" class="star-mark"
+                    alt="img">
+                  Comprehensive apartment care during guests' stay
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrapper">
+        <h2 data-aos="fade-up" data-aos-delay="100">Contact Our Team</h2>
+        <p data-aos="fade-up" data-aos-delay="150">We’ll take care of
+          everything</p>
+        <div class="cont">
+          <form action data-aos="fade-right" data-aos-delay="100">
+            <h3>Contact Form</h3>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea name id placeholder="Message" required></textarea>
+            <button>Send Message</button>
+          </form>
+          <div class="details" data-aos="fade-left" data-aos-delay="100">
+            <h3>Call Us</h3>
+            <p>Call our team Mon - Friday From 8 am to 5 pm</p>
+            <ul>
+              <li>
+                <a href="tel:+49176 24898317">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.9249 6.69395C17.7899 1.83395 11.3699 0.39395 6.40493 3.40895C1.55993 6.42395 -7.15256e-05 12.994 3.13493 17.839L3.38993 18.229L2.33993 22.159L6.26993 21.109L6.65993 21.364C8.35493 22.279 10.1999 22.8039 12.0299 22.8039C13.9949 22.8039 15.9599 22.279 17.6549 21.229C22.4999 18.079 23.9399 11.6439 20.9249 6.66395V6.69395ZM18.1799 16.8039C17.6549 17.584 16.9949 18.1089 16.0799 18.2439C15.5549 18.2439 14.8949 18.499 12.2849 17.464C10.0649 16.414 8.21993 14.704 6.91493 12.739C6.13493 11.824 5.72993 10.639 5.60993 9.45395C5.60993 8.40395 5.99993 7.48895 6.65993 6.82895C6.91493 6.57395 7.18493 6.43895 7.43993 6.43895H8.09993C8.35493 6.43895 8.62493 6.43895 8.75993 6.96395C9.01493 7.62395 9.67493 9.19895 9.67493 9.33395C9.80993 9.46895 9.74993 10.474 9.14993 11.044C8.81993 11.419 8.75993 11.434 8.89493 11.704C9.41993 12.484 10.0799 13.2789 10.7249 13.9389C11.5049 14.599 12.2999 15.124 13.2149 15.514C13.4699 15.649 13.7399 15.649 13.8749 15.379C14.0099 15.124 14.6549 14.464 14.9249 14.194C15.1799 13.939 15.3149 13.9389 15.5849 14.059L17.6849 15.109C17.9399 15.244 18.2099 15.3639 18.3449 15.499C18.4799 15.889 18.4799 16.4139 18.2099 16.8039H18.1799Z"
+                      fill="#19A1DB" />
+                  </svg>
+                  +49176 24898317
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_0_3770)">
+                      <path
+                        d="M3 7.33398C3 6.80355 3.21071 6.29484 3.58579 5.91977C3.96086 5.5447 4.46957 5.33398 5 5.33398H19C19.5304 5.33398 20.0391 5.5447 20.4142 5.91977C20.7893 6.29484 21 6.80355 21 7.33398V17.334C21 17.8644 20.7893 18.3731 20.4142 18.7482C20.0391 19.1233 19.5304 19.334 19 19.334H5C4.46957 19.334 3.96086 19.1233 3.58579 18.7482C3.21071 18.3731 3 17.8644 3 17.334V7.33398Z"
+                        stroke="#19A1DB" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M3 7.33398L12 13.334L21 7.33398" stroke="#19A1DB"
+                        stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                      <clippath id="clip0_0_3770">
+                        <rect width="24" height="24" fill="white"
+                          transform="translate(0 0.333984)" />
+                      </clippath>
+                    </defs>
+                  </svg>
+                  info@cleansmile.team
+                </a>
+              </li>
+            </ul>
+            <h4>
+              Visit Us
+            </h4>
+            <ul>
+              <li>
+                <a href="#">
+                  <svg width="24" height="25" viewBox="0 0 24 25" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_0_3778)">
+                      <path
+                        d="M9 11.834C9 12.6296 9.31607 13.3927 9.87868 13.9553C10.4413 14.5179 11.2044 14.834 12 14.834C12.7956 14.834 13.5587 14.5179 14.1213 13.9553C14.6839 13.3927 15 12.6296 15 11.834C15 11.0383 14.6839 10.2753 14.1213 9.71266C13.5587 9.15005 12.7956 8.83398 12 8.83398C11.2044 8.83398 10.4413 9.15005 9.87868 9.71266C9.31607 10.2753 9 11.0383 9 11.834Z"
+                        stroke="black" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path
+                        d="M17.6578 17.4912L13.4148 21.7342C13.0398 22.1088 12.5314 22.3193 12.0013 22.3193C11.4712 22.3193 10.9628 22.1088 10.5878 21.7342L6.3438 17.4912C5.22502 16.3723 4.46313 14.9469 4.15448 13.395C3.84584 11.8432 4.00429 10.2347 4.6098 8.77291C5.21531 7.31113 6.24069 6.06172 7.55628 5.18269C8.87186 4.30365 10.4186 3.83447 12.0008 3.83447C13.583 3.83447 15.1297 4.30365 16.4453 5.18269C17.7609 6.06172 18.7863 7.31113 19.3918 8.77291C19.9973 10.2347 20.1558 11.8432 19.8471 13.395C19.5385 14.9469 18.7766 16.3723 17.6578 17.4912Z"
+                        stroke="black" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                      <clippath id="clip0_0_3778">
+                        <rect width="24" height="24" fill="white"
+                          transform="translate(0 0.833984)" />
+                      </clippath>
+                    </defs>
+                  </svg>
+
+                  21224 Slatine - Grad Split, Hrvatska
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrapper">
+
+        <div class="cont">
+          <div class="l">
+            <a href="index.html">
+              <img loading="lazy" src="img/footer-logo.webp" alt="img">
+            </a>
+            <a href="#" class="icon-btn">
+              <img loading="lazy" src="img/in.webp" alt="img">
+            </a>
+          </div>
+          <div class="r">
+            <ul>
+              <li class="tit">Home</li>
+              <li><a href="#" class="scroll2" name="about-us">About</a></li>
+              <li><a href="#" class="scroll2">Featured</a></li>
+              <li><a href="#" class="scroll2"
+                  name="our-service">Service</a></li>
+              <li><a href="#" class="scroll2">Asset Security</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+            <ul>
+              <li class="tit">Help</li>
+              <li><a href="#contact" class="scroll2" name="contact">Contact
+                  Us</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+            <ul>
+              <li class="tit">Legal</li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="linemiddle"></div>
+        <p class="copyright">
+          Copyright ©2025 Cleansmile. All Rights Reserved
+        </p>
+      </div>
+    </footer>
+
+    <a href="tel:+49176 24898317" class="tw-fixed">
+      <svg width="44" height="46" viewBox="0 0 44 46" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M38.3624 12.7592C32.6149 3.64666 20.8449 0.946664 11.7424 6.59979C2.85987 12.2529 -0.000131218 24.5717 5.74737 33.656L6.21487 34.3873L4.28987 41.756L11.4949 39.7873L12.2099 40.2654C15.3174 41.981 18.6999 42.9654 22.0549 42.9654C25.6574 42.9654 29.2599 41.981 32.3674 40.0123C41.2499 34.106 43.8899 22.0404 38.3624 12.7029V12.7592ZM33.3299 31.7154C32.3674 33.1779 31.1574 34.1623 29.4799 34.4154C28.5174 34.4154 27.3074 34.8935 22.5224 32.9529C18.4524 30.9842 15.0699 27.7779 12.6774 24.0935C11.2474 22.3779 10.5049 20.156 10.2849 17.9342C10.2849 15.9654 10.9999 14.2498 12.2099 13.0123C12.6774 12.5342 13.1724 12.281 13.6399 12.281H14.8499C15.3174 12.281 15.8124 12.281 16.0599 13.2654C16.5274 14.5029 17.7374 17.456 17.7374 17.7092C17.9849 17.9623 17.8749 19.8467 16.7749 20.9154C16.1699 21.6185 16.0599 21.6467 16.3074 22.1529C17.2699 23.6154 18.4799 25.106 19.6624 26.3435C21.0924 27.581 22.5499 28.5654 24.2274 29.2967C24.6949 29.5498 25.1899 29.5498 25.4374 29.0435C25.6849 28.5654 26.8674 27.3279 27.3624 26.8217C27.8299 26.3435 28.0774 26.3435 28.5724 26.5685L32.4224 28.5373C32.8899 28.7904 33.3849 29.0154 33.6324 29.2685C33.8799 29.9998 33.8799 30.9842 33.3849 31.7154H33.3299Z"
+          fill="#fff" />
+      </svg>
+      <span>+49176 24898317</span>
+    </a>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

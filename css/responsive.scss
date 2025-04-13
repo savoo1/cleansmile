@@ -1,0 +1,307 @@
+@media (max-width: 1100px) {
+    .wrapper {
+        max-width: 900px;
+    }
+    .hero {
+        min-height: 680px;
+    }
+    .our-service-area .box .inside .cont .location-box2 {
+        position: relative;
+        right: unset;
+        left: unest;
+        padding: 15px;
+        margin-top: 15px;
+        width: 100%;
+        max-width: 100%;
+        z-index: 9;
+        background-color: #fff;
+    }
+    .our-service-area .box .inside .cont .location-box2 ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .our-service-area .box .inside .location-box {
+        width: 100%;
+    }
+    .our-service {
+        padding-top: 100px;
+    }
+    .apartment-care .box ul {
+        max-width: 100%;
+    }
+    .apartment-care .box .ap-care {
+        position: relative;
+        top: unset;
+        right: unset;
+        margin: auto;
+        display: block;
+        margin-top: 30px;
+    }
+    .apartment-care .box .box-white {
+        margin-top: -50px;
+    }
+    .about-us .box ul li {
+        font-size: 16px;
+    }
+    .about-us .r {
+        max-width: 400px;
+    }
+    .contact .cont form {
+        max-width: 450px;
+    }
+    footer .r {
+        gap: 40px;
+    }
+    .language-dropdown {
+        left: unset;
+        right: 0;
+    }
+}
+
+@media (max-width: 880px) {
+    .wrapper {
+        max-width: 600px;
+    }
+
+    .lines {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 5px;
+        cursor: pointer;
+        .line {
+            width: 25px;
+            height: 2px;
+            background-color: #000;
+            transition: all ease 0.5s;
+        }
+    }
+    .navbar.active .lines {
+        .line:nth-child(1) {
+            transform: rotate(50deg);
+        }
+        .line:nth-child(2) {
+            transform: rotate(-50deg);
+            margin-top: -7px;
+        }
+        .line:nth-child(3) {
+            transform: rotate(50deg);
+            margin-top: -9px;
+            opacity: 0;
+        }
+    }
+    .navbar.active .middle {
+        max-height: calc(100vh - 150px);
+        opacity: 1;
+        visibility: visible;
+        overflow: auto;
+    }
+    .navbar .middle {
+        position: fixed;
+        background-color: #fff;
+        top: 100px;
+        border-radius: 16px;
+        width: 100%;
+        max-width: calc(100% - 30px);
+        left: 0;
+        right: 0;
+        margin: auto;
+
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        transition: all ease 0.5s;
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            li {
+                padding: 10px 20px;
+            }
+        }
+    }
+
+    .language-switcher .choosen {
+        font-size: 0;
+        margin-right: 5px;
+        font,
+        span,
+        svg {
+            display: none;
+        }
+        padding: 0;
+        border: 0;
+    }
+    nav .right .left-line {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .our-service-area .box .inside {
+        overflow: hidden;
+    }
+    .our-service-area .box {
+        margin-top: 0;
+    }
+    .hero h1 {
+        font-size: 40px;
+    }
+    .hero .cont {
+        padding-top: 50px;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+    .hero {
+        background: #19a1db;
+        background: linear-gradient(184deg, rgba(25, 161, 219, 1) 0%, rgba(255, 255, 255, 1) 79%);
+        min-height: 580px;
+    }
+    .our-service-area .box .inside h3,
+    .our-service h3 {
+        font-size: 24px;
+    }
+    .our-service-area .box .inside h2,
+    .apartment-care .box h2,
+    .contact h2,
+    .about-us h2,
+    .our-service h2 {
+        font-size: 34px;
+    }
+    .our-service-area .box .inside p {
+        font-size: 18px;
+    }
+    .our-service-area .box .inside .map {
+        transform: scale(0.65);
+        transform-origin: 0 0;
+    }
+    .our-service-area .box .inside .location-box ul {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .our-service-area .box .inside .location-box ul li {
+        font-size: 18px;
+    }
+    .our-service-area .box .inside .cont {
+        margin-top: -250px;
+    }
+    .our-service-area .box .inside .cont p {
+        font-size: 16px;
+    }
+    .our-service .boxes .box {
+        width: 100%;
+    }
+    .apartment-care .box {
+        padding: 30px;
+    }
+    .about-us .cont {
+        flex-direction: column;
+        gap: 25px;
+    }
+    .about-us .r {
+        max-width: 100%;
+    }
+    .about-us {
+        padding-top: 100px;
+    }
+    .contact p {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    .contact .cont {
+        flex-direction: column;
+        gap: 50px;
+        margin-top: 30px;
+        form {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    footer .r {
+        gap: 30px;
+    }
+    footer .r ul {
+        min-width: unset;
+    }
+    .contact .cont .details {
+        max-width: 100%;
+        margin-top: 0;
+    }
+    .our-service .boxes .box {
+        min-height: unset;
+    }
+}
+
+@media (max-width: 550px) {
+    .hero .wrapper {
+        max-width: 400px;
+    }
+    nav .right .getin {
+        display: none;
+    }
+    .hero {
+        padding-bottom: 70px;
+        padding-top: 80px;
+    }
+    .hero .cont {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .our-service-area .box .inside {
+        padding: 20px;
+    }
+    .our-service-area .box .inside h2,
+    .apartment-care .box h2,
+    .contact h2,
+    .about-us h2,
+    .our-service h2 {
+        font-size: 32px;
+    }
+    .our-service-area .box .inside h3,
+    .our-service h3 {
+        font-size: 22px;
+    }
+    .our-service-area .box .inside .map {
+        transform: scale(0.5);
+        transform-origin: -111px 7px;
+    }
+    .apartment-care .box ul li {
+        width: 100%;
+        max-width: 100%;
+    }
+    .apartment-care .box {
+        padding: 20px;
+    }
+    .apartment-care .box .ap-care {
+        max-width: calc(100% + 80px);
+        margin-left: -40px;
+    }
+    .about-us p {
+        font-size: 18px;
+    }
+    .contact .cont form {
+        padding: 20px;
+    }
+    .contact .cont form input {
+        margin-bottom: 13px;
+    }
+    .contact .cont form textarea {
+        margin-bottom: 13px;
+    }
+    .contact .cont .details ul li a {
+        font-size: 14px;
+    }
+    footer .cont {
+        flex-direction: column;
+        gap: 50px;
+    }
+    footer .cont .l {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    footer .icon-btn {
+        margin-top: 0;
+    }
+}
