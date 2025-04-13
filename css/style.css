@@ -744,6 +744,8 @@ nav .right .getin:hover {
 .about-us {
   padding-top: 212px;
   padding-bottom: 98px;
+  position: relative;
+  overflow: hidden;
 }
 .about-us h4 {
   color: #444040;
