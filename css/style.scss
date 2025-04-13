@@ -562,6 +562,8 @@ nav {
 	max-height: 4000px;
 }
 .our-service {
+	overflow: hidden;
+	position: relative;
 	padding-top: 180px;
 	background: #fff;
 	background: linear-gradient(
@@ -893,6 +895,7 @@ nav {
 	background: linear-gradient(180deg, rgba(25, 161, 219, 0.5) 0%, rgba(255, 255, 255, 1) 73%);
 	padding-top: 64px;
 	padding-bottom: 98px;
+	overflow: hidden;
 
 	h2 {
 		font-family: "Plus Jakarta Sans", sans-serif;
