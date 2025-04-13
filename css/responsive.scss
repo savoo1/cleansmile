@@ -176,6 +176,14 @@
         transform: scale(0.65);
         transform-origin: 0 0;
     }
+    .our-service-area .box .inside .map-box {
+        position: relative;
+        overflow: hidden;
+        height: 250px;
+        width: calc(100% + 60px);
+        margin-left: -30px;
+        padding-left: 30px;
+    }
     .our-service-area .box .inside .location-box ul {
         gap: 10px;
         flex-wrap: wrap;
@@ -184,7 +192,7 @@
         font-size: 18px;
     }
     .our-service-area .box .inside .cont {
-        margin-top: -250px;
+        margin-top: -100px;
     }
     .our-service-area .box .inside .cont p {
         font-size: 16px;
@@ -262,10 +270,7 @@
     .our-service h3 {
         font-size: 22px;
     }
-    .our-service-area .box .inside .map {
-        transform: scale(0.5);
-        transform-origin: -111px 7px;
-    }
+
     .apartment-care .box ul li {
         width: 100%;
         max-width: 100%;
@@ -303,5 +308,12 @@
     }
     footer .icon-btn {
         margin-top: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .our-service-area .box .inside .map {
+        transform: scale(0.5);
+        transform-origin: -111px 7px;
     }
 }
