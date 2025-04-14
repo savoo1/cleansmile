@@ -278,6 +278,32 @@ nav {
 	overflow: hidden;
 	padding-top: 100px;
 
+	.img-place {
+		position: relative;
+		.stars {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			animation: blink 1.5s infinite ease-in-out;
+		}
+
+		@keyframes blink {
+			0% {
+				opacity: 0;
+				top: 0;
+			}
+			50% {
+				opacity: 1;
+				top: -5px;
+			}
+			100% {
+				opacity: 0;
+				top: 0px;
+			}
+		}
+	}
+
 	.wrapper {
 		position: relative;
 		z-index: 999;
