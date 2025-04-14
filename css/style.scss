@@ -57,6 +57,21 @@ nav {
 	font-family: "Plus Jakarta Sans", sans-serif;
 	z-index: 9999;
 
+	.only-mobile {
+		display: none;
+		@media (max-width: 772px) {
+			display: inline-flex;
+		}
+	}
+	.only-desktop {
+		@media (max-width: 772px) {
+			display: none;
+		}
+	}
+	.logo {
+		max-width: 41px;
+	}
+
 	*::-webkit-scrollbar {
 		width: 5px;
 	}
@@ -135,6 +150,8 @@ nav {
 			padding: 10px 17px;
 			border-radius: 10px;
 			transition: all ease 0.5s;
+			align-items: center;
+			text-align: center;
 			&:hover {
 				background-color: #517db6;
 			}
@@ -331,47 +348,47 @@ nav {
 		color: #fff;
 		margin-top: 20px;
 		line-height: 160%;
-		text-shadow: 1px 1px 1px #000000;
-	}
-
-	.bubbles {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		pointer-events: none;
-	}
-
-	.bubble {
-		position: absolute;
-		bottom: 0px;
-		opacity: 0;
-		animation-name: floatUp;
-		animation-timing-function: ease-in-out;
-		animation-fill-mode: forwards;
-		filter: blur(1px); // dreamy soft edge
-	}
-
-	@keyframes floatUp {
-		0% {
-			transform: translate(0, 0);
-			opacity: 0;
-		}
-		35% {
-			opacity: 0.1;
-		}
-		50% {
-			opacity: 1;
-		}
-		90% {
-			opacity: 1;
-		}
-		100% {
-			transform: translateX(30px) translateY(-120vh);
-			opacity: 0;
-		}
+		text-shadow: 1px 1px 2px #000000;
+		letter-spacing: 0.5px;
 	}
 }
 
+.bubbles {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+}
+
+.bubble {
+	position: absolute;
+	bottom: 0px;
+	opacity: 0;
+	animation-name: floatUp;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	filter: blur(1px); // dreamy soft edge
+}
+
+@keyframes floatUp {
+	0% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+	35% {
+		opacity: 0.1;
+	}
+	50% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(30px) translateY(-130vh);
+		opacity: 0;
+	}
+}
 .our-service-area {
 	.box {
 		background: #19a1db;
@@ -599,6 +616,10 @@ nav {
 		rgba(255, 255, 255, 1) 95%
 	);
 	min-height: 1500px;
+	.wrapper {
+		position: relative;
+		z-index: 99;
+	}
 	h3 {
 		font-family: "Plus Jakarta Sans", sans-serif;
 		font-size: 32px;
@@ -924,6 +945,11 @@ nav {
 	padding-top: 64px;
 	padding-bottom: 98px;
 	overflow: hidden;
+	position: relative;
+	.wrapper {
+		z-index: 99;
+		position: relative;
+	}
 
 	h2 {
 		font-family: "Plus Jakarta Sans", sans-serif;
@@ -1167,7 +1193,7 @@ footer {
 	position: fixed;
 	right: 0;
 	bottom: 100px;
-	padding: 5px 20px 5px 30px;
+	padding: 10px 20px 10px 30px;
 	border-top-left-radius: 25px;
 	border-bottom-left-radius: 25px;
 	z-index: 999;
@@ -1201,17 +1227,20 @@ footer {
 	svg {
 		width: 35px;
 	}
+	img {
+		width: 35px;
+	}
 }
 
 @keyframes wpan {
 	0% {
-		padding: 5px 15px 5px 30px;
+		padding: 10px 15px 10px 30px;
 	}
 	50% {
-		padding: 5px 15px 5px 35px;
+		padding: 10px 15px 10px 35px;
 	}
 	100% {
-		padding: 5px 15px 5px 30px;
+		padding: 10px 15px 10px 30px;
 	}
 }
 
@@ -1244,4 +1273,159 @@ body > .skiptranslate {
 #google_translate_element {
 	position: absolute;
 	opacity: 0;
+}
+
+.faq {
+	padding-top: 30px;
+	padding-bottom: 100px;
+	.box {
+		border: 1px solid #e0e5e7;
+		min-height: 598px;
+		border-radius: 30px;
+		background: #fff;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 1) 40%, rgba(25, 161, 219, 0.4) 100%);
+		padding: 62px 47px;
+		position: relative;
+		overflow: hidden;
+
+		.box-white {
+			background-color: #fff;
+			position: relative;
+			z-index: 2;
+			max-width: 500px;
+			margin: auto;
+			margin-top: 40px;
+			padding: 20px;
+			border-radius: 16px;
+			border: 1px solid #dddbdb;
+			.btn-pr {
+				font-size: 16px;
+				padding: 15px 25px;
+				margin-top: 10px;
+			}
+			p {
+				color: #525151;
+				font-size: 17px;
+				line-height: 130%;
+				font-weight: 400;
+				font-family: "Schibsted Grotesk", sans-serif;
+				margin: 0;
+				max-width: 350px;
+			}
+		}
+
+		h2 {
+			font-family: "Plus Jakarta Sans", sans-serif;
+			font-size: 56px;
+			font-weight: 600;
+			line-height: 120%;
+			color: #091013;
+			margin-bottom: 20px;
+		}
+		p {
+			font-family: "Plus Jakarta Sans", sans-serif;
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 160%;
+			color: #494a4a;
+		}
+	}
+
+	.faq-cards {
+		max-width: 1342px;
+		margin: auto;
+		margin-top: 41px;
+	}
+	.faq-card:last-child {
+		margin-bottom: 0;
+	}
+	.faq-card {
+		background-color: #fff;
+		z-index: 10;
+		position: relative;
+		border: 1px solid #e0e2e3;
+		border-radius: 16px;
+		-webkit-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.15);
+		-moz-box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.15);
+		box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.15);
+		margin-bottom: 22px;
+
+		.question {
+			color: #000;
+			font-size: 20px;
+			padding-left: 5px;
+			padding: 18px;
+			font-weight: 600;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			cursor: pointer;
+			font-family: "Plus Jakarta Sans", sans-serif;
+
+			.navigator {
+				width: 30px;
+				height: 30px;
+				border: 2px solid #000;
+				border-radius: 100%;
+				position: relative;
+				min-width: 30px;
+			}
+			.navigator:after {
+				width: 13px;
+				height: 2px;
+				background-color: #000;
+				border-radius: 2px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: auto;
+				content: "";
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+			.navigator:before {
+				width: 13px;
+				height: 2px;
+				background-color: #000;
+				border-radius: 2px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: auto;
+				content: "";
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) rotate(90deg);
+				transition: all ease 0.5s;
+			}
+		}
+		.answer {
+			overflow: hidden;
+			max-height: 0;
+			transition: all ease 0.5s;
+			.in {
+				padding: 10px;
+				padding-top: 10px;
+				transition: all ease 0.5s;
+			}
+			p {
+				font-family: "Plus Jakarta Sans", sans-serif;
+				font-size: 18px;
+				font-weight: 400;
+				color: #000;
+			}
+		}
+	}
+	.question_opened .question {
+		.navigator:before {
+			transform: translate(-50%, -50%) rotate(0);
+		}
+	}
+	.question_opened .answer {
+		.in {
+			padding: 21px;
+			padding-top: 0;
+		}
+	}
 }

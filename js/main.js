@@ -32,6 +32,22 @@ $(".navbar .lines").click(function (e) {
   }
 });
 
+$(".faq-card .question").click(function (e) {
+  e.preventDefault();
+  if ($(this).parent().hasClass("question_opened")) {
+    $(this).parent().removeClass("question_opened");
+    $(this).next().css("max-height", "0px");
+  } else {
+    $(".question_opened").find(".answer").css("max-height", "0px");
+    $(".question_opened").removeClass("question_opened");
+    $(this).parent().addClass("question_opened");
+    var heightinside = $(this).next().find(".in").height() + 50;
+    $(this)
+      .next()
+      .css("max-height", heightinside + "px");
+  }
+});
+
 $(document).ready(function () {
   const container = $(".bubbles");
 

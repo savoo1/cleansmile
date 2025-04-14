@@ -134,8 +134,8 @@
         border: 0;
     }
     nav .right .left-line {
-        margin-left: 15px;
-        margin-right: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .our-service-area .box .inside {
@@ -166,6 +166,7 @@
     .apartment-care .box h2,
     .contact h2,
     .about-us h2,
+    .faq .box h2,
     .our-service h2 {
         font-size: 34px;
     }
@@ -200,7 +201,8 @@
     .our-service .boxes .box {
         width: 100%;
     }
-    .apartment-care .box {
+    .apartment-care .box,
+    .faq .box {
         padding: 30px;
     }
     .about-us .cont {
@@ -226,6 +228,9 @@
             max-width: 100%;
         }
     }
+    .faq .box p {
+        font-size: 16px;
+    }
     footer .r {
         gap: 30px;
     }
@@ -246,7 +251,9 @@
         max-width: 400px;
     }
     nav .right .getin {
-        display: none;
+        padding: 10px;
+        font-size: 14px;
+        margin-left: 7px;
     }
     .hero {
         padding-bottom: 70px;
@@ -262,6 +269,7 @@
     .our-service-area .box .inside h2,
     .apartment-care .box h2,
     .contact h2,
+    .faq .box h2,
     .about-us h2,
     .our-service h2 {
         font-size: 32px;
@@ -275,8 +283,15 @@
         width: 100%;
         max-width: 100%;
     }
-    .apartment-care .box {
+    .apartment-care .box,
+    .faq .box {
         padding: 20px;
+    }
+    .faq .faq-card .question {
+        font-size: 18px;
+    }
+    .faq .faq-card {
+        margin-bottom: 10px;
     }
     .apartment-care .box .ap-care {
         max-width: calc(100% + 80px);
