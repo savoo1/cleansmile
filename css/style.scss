@@ -248,9 +248,9 @@ nav {
 	left: 0;
 	background-color: #fff;
 	border: 1px solid #fff;
-	// border-top-left-radius: 10px;
-	// border-bottom-left-radius: 10px;
-	border-radius: 10px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	// border-radius: 10px;
 	padding: 5px 0;
 	display: none;
 	width: 180px;
@@ -720,6 +720,9 @@ nav {
 				font-weight: 500;
 				font-family: "Schibsted Grotesk", sans-serif;
 				margin-top: 15px;
+				.sm {
+					text-decoration: underline;
+				}
 				span {
 					font-size: 17px;
 				}
@@ -1129,6 +1132,11 @@ footer {
 	min-height: 200px;
 	background-color: #fff;
 	padding-top: 55px;
+	.l {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+	}
 	.logo {
 		max-width: 89px;
 	}
@@ -1152,7 +1160,13 @@ footer {
 		justify-content: space-between;
 	}
 	.icon-btn {
-		margin-top: 45px;
+		// margin-top: 45px;
+		// margin-bottom: 25px;
+		width: 50px;
+		height: 50px;
+		img {
+			width: 25px;
+		}
 	}
 	.r {
 		display: flex;
