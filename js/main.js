@@ -1,5 +1,55 @@
 AOS.init();
 
+document.addEventListener("DOMContentLoaded", () => {
+  document
+    .getElementById("contactForm")
+    .addEventListener("submit", function (e) {
+      e.preventDefault(); // 🛑 SPREČAVA REFRESH
+
+      const form = e.target;
+      const formData = new FormData(form);
+      const status = document.getElementById("formStatus");
+      const button = document.getElementById("submitBtn");
+
+      // Resetuj status
+      status.style.display = "none";
+      status.textContent = "";
+
+      // Prikazi indikator da se šalje
+      button.textContent = "Sending...";
+      button.disabled = true;
+
+      fetch("send.php", {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => res.text())
+        .then((response) => {
+          // Prikaz poruke ispod dugmeta
+          status.style.display = "block";
+          status.textContent = response;
+
+          if (response.toLowerCase().includes("uspešno")) {
+            status.style.color = "green";
+            button.style.backgroundColor = "#28a745";
+            form.reset();
+          } else {
+            status.style.color = "red";
+          }
+
+          button.textContent = "Send Message";
+          button.disabled = false;
+        })
+        .catch(() => {
+          status.style.display = "block";
+          status.textContent = "❌ Došlo je do greške. Pokušajte ponovo.";
+          status.style.color = "red";
+          button.textContent = "Send Message";
+          button.disabled = false;
+        });
+    });
+});
+
 $(".our-service .btn-box .btn-pr").click(function (e) {
   e.preventDefault();
   if ($(this).parent().parent().parent().hasClass("openedbox")) {
@@ -89,17 +139,18 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
+  let path = window.location.pathname || "";
+  let isGermanPage = !path.includes("index-hr") && (path === "/" || path === "" || path.endsWith("/index.html"));
+
   $(".language-switcher").each(function () {
     let $dropdown = $(this).find(".language-dropdown");
     let $chosen = $(this).find(".choosen");
 
-    // Function to update the language icon based on the current language
     function updateLanguageIcon(lang) {
-      // Get the selected language (can also be from localStorage or a default fallback)
       let $selectedItem = $dropdown.find(`li[data-lang="${lang}"]`);
       if ($selectedItem.length) {
         let flag = $selectedItem.find("img").attr("src");
-        let text = $selectedItem.text().trim();
+        let text = ($selectedItem.find("span").length ? $selectedItem.find("span").first().text() : $selectedItem.text()).trim();
 
         // Update chosen language display
         $chosen.html(
@@ -108,8 +159,15 @@ $(document).ready(function () {
       }
     }
 
-    // Run on load to set the initial icon
-    let initialLang = localStorage.getItem("language") || "en"; // Default to English
+    let initialLang;
+    if (isGermanPage) {
+      initialLang = "de";
+      localStorage.setItem("language", "de");
+    } else {
+      initialLang = localStorage.getItem("language") || "hr";
+      localStorage.setItem("language", "hr");
+      updateLanguageIcon("hr");
+    }
     updateLanguageIcon(initialLang);
 
     // Toggle dropdown
@@ -130,60 +188,83 @@ $(document).ready(function () {
       }
     });
 
-    // Change Language - Using event delegation for list items
     $dropdown.on("click", "li", function () {
       let lang = $(this).data("lang");
+      if (!lang) return;
 
-      // Check if selected language is English
-      if (lang === "en") {
-        // Reset language settings (ensure Google Translate is disabled or reset)
-        localStorage.setItem("language", "en"); // Save English as the selected language
-        updateLanguageIcon("en"); // Update the language icon to English
+      // Croatian on German page: go to fixed Croatian page (no Translate)
+      if (lang === "hr" && isGermanPage) {
+        window.location.href = "index-hr.html";
+        return;
+      }
 
-        // Disable Google Translate translation for English (force it to reset)
-        let googleTranslateCombo = document.querySelector(".goog-te-combo");
-        if (googleTranslateCombo) {
-          googleTranslateCombo.value = "en";
-          googleTranslateCombo.dispatchEvent(new Event("change"));
+      // German: on index-hr go to index.html; on index (DE) reset to original German
+      if (lang === "de") {
+        if (!isGermanPage) {
+          window.location.href = "index.html";
+          return;
+        }
+        localStorage.setItem("language", "de");
+        updateLanguageIcon("de");
+        let gtCombo = document.querySelector(".goog-te-combo");
+        if (gtCombo) {
+          gtCombo.value = "de";
+          gtCombo.dispatchEvent(new Event("change"));
+        }
+        $dropdown.hide();
+        return;
+      }
 
-          // If Google Translate is applied, reset the page to English by reloading
-          if (
-            typeof google &&
-            google.translate &&
-            google.translate.TranslateElement
-          ) {
-            let translateElement = google.translate.TranslateElement;
-            if (translateElement) {
-              google.translate.TranslateElement(
-                { pageLanguage: "en", includedLanguages: "en" },
-                "google_translate_element"
-              );
-            }
+      // On index-hr only: English = reset Translate to original
+      if (lang === "en" && !isGermanPage) {
+        localStorage.setItem("language", "en");
+        updateLanguageIcon("en");
+        let gtCombo = document.querySelector(".goog-te-combo");
+        if (gtCombo) {
+          gtCombo.value = "en";
+          gtCombo.dispatchEvent(new Event("change"));
+          if (typeof google !== "undefined" && google.translate && google.translate.TranslateElement) {
+            google.translate.TranslateElement(
+              { pageLanguage: "en", includedLanguages: "en" },
+              "google_translate_element"
+            );
           }
         }
-
-        // Optionally, reload the page to reset Google Translate if needed
-        // location.reload(); // Uncomment if you want to reload the page and reset Google Translate
-
-        return; // Prevent the rest of the translation flow
+        $dropdown.hide();
+        return;
       }
 
-      // For other languages, update the icon and trigger Google Translate
+      // All other languages: Google Translate
       updateLanguageIcon(lang);
-
-      // Save the selected language in localStorage
       localStorage.setItem("language", lang);
-
-      // Force Google Translate to change language (for non-English languages)
-      let googleTranslateCombo = document.querySelector(".goog-te-combo");
-      if (googleTranslateCombo) {
-        googleTranslateCombo.value = lang;
-        googleTranslateCombo.dispatchEvent(new Event("change"));
+      let gtCombo = document.querySelector(".goog-te-combo");
+      if (gtCombo) {
+        gtCombo.value = lang;
+        gtCombo.dispatchEvent(new Event("change"));
       }
-
-      $dropdown.hide(); // Hide dropdown after selection
+      $dropdown.hide();
     });
   });
+});
+
+// Automatski prevod na hrvatski samo na index-hr (ne na njemačkoj stranici)
+document.addEventListener("DOMContentLoaded", function () {
+  let path = window.location.pathname || "";
+  let isGermanPage = !path.includes("index-hr") && (path === "/" || path === "" || path.endsWith("/index.html"));
+  if (isGermanPage) return;
+
+  setTimeout(function () {
+    const select = document.querySelector(".goog-te-combo");
+    if (select) {
+      select.value = "hr";
+      select.dispatchEvent(new Event("change"));
+      let googleTranslateCombo = document.querySelector(".goog-te-combo");
+      if (googleTranslateCombo) {
+        googleTranslateCombo.value = "hr";
+        googleTranslateCombo.dispatchEvent(new Event("change"));
+      }
+    }
+  }, 1000);
 });
 
 $(document).ready(function () {
