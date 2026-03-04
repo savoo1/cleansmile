@@ -25,12 +25,10 @@
       rel="stylesheet">
 
     <script type="text/javascript">
+      // Držimo istu inicijalizaciju kao na index-hr,
+      // a naš JS dropdown ručno bira jezik preko .goog-te-combo
       function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-          pageLanguage: 'de',
-          includedLanguages: 'de,en,hr,ru,fr,sq,it,bg',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-        }, 'google_translate_element');
+        new google.translate.TranslateElement({}, 'google_translate_element');
       }
     </script>
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -71,9 +69,7 @@
               <span class="only-mobile">Angebot anfordern</span>
             </a>
 
-            <!-- <div class="left-line"></div> -->
-
-            <div class="language-switcher" style="display: none;">
+            <div class="language-switcher">
               <a href="#" class="choosen">
                 <img src="https://flagcdn.com/w40/de.webp"
                   alt="Deutsch"
@@ -83,13 +79,11 @@
               </a>
               <ul class="language-dropdown notranslate">
                 <li data-lang="de"><img loading="lazy" src="https://flagcdn.com/w40/de.webp" alt="Deutsch"> <span class="notranslate">Deutsch</span></li>
-                <li data-lang="hr"><img loading="lazy" src="https://flagcdn.com/w40/hr.webp" alt="Hrvatski"> <span class="notranslate">Hrvatski</span></li>
                 <li data-lang="en"><img loading="lazy" src="https://flagcdn.com/w40/gb.webp" alt="English"> <span class="notranslate">English</span></li>
-                <li data-lang="ru"><img loading="lazy" src="https://flagcdn.com/w40/ru.webp" alt="Russian"> <span class="notranslate">Russian</span></li>
-                <li data-lang="fr"><img loading="lazy" src="https://flagcdn.com/w40/fr.webp" alt="French"> <span class="notranslate">French</span></li>
-                <li data-lang="sq"><img loading="lazy" src="https://flagcdn.com/w40/al.webp" alt="Albanian"> <span class="notranslate">Albanian</span></li>
-                <li data-lang="it"><img loading="lazy" src="https://flagcdn.com/w40/it.webp" alt="Italian"> <span class="notranslate">Italian</span></li>
-                <li data-lang="bg"><img loading="lazy" src="https://flagcdn.com/w40/bg.webp" alt="Bulgarian"> <span class="notranslate">Bulgarian</span></li>
+                <li data-lang="sr"><img loading="lazy" src="https://flagcdn.com/w40/rs.webp" alt="Srpski"> <span class="notranslate">Srpski</span></li>
+                <li data-lang="ru"><img loading="lazy" src="https://flagcdn.com/w40/ru.webp" alt="Русский"> <span class="notranslate">Русский</span></li>
+                <li data-lang="pl"><img loading="lazy" src="https://flagcdn.com/w40/pl.webp" alt="Polski"> <span class="notranslate">Polski</span></li>
+                <li data-lang="tr"><img loading="lazy" src="https://flagcdn.com/w40/tr.webp" alt="Türkçe"> <span class="notranslate">Türkçe</span></li>
               </ul>
               <div id="google_translate_element" style="display: none;"></div>
             </div>
@@ -501,12 +495,12 @@
         <p data-aos="fade-up" data-aos-delay="150">Wir kümmern uns persönlich um Ihr Anliegen.</p>
         <div class="cont">
           <form id="contactForm" data-aos="fade-right" data-aos-delay="100">
-            <h3>Contact Form</h3>
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Message" required></textarea>
+            <h3>Kontaktformular</h3>
+            <input type="text" name="name" placeholder="Ihr Name" required>
+            <input type="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+            <textarea name="message" placeholder="Ihre Nachricht" required></textarea>
             <button type="submit" id="submitBtn"
-              style="transition: background 0.3s;">Send Message</button>
+              style="transition: background 0.3s;">Nachricht senden</button>
             <p id="formStatus"
               style="display: none; margin-top: 10px; font-weight: bold;"></p>
           </form>
